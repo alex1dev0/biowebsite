@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALEX1DEV BIO</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        } else if (savedTheme === 'light') {
+            document.documentElement.classList.remove('dark-mode');
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+</head>
+<body>
+    <!-- Overlay per avvio musica -->
+    <div id="music-start-overlay" class="music-start-overlay">
+        <button id="start-music-btn" class="start-music-btn">
+            <i class="fas fa-play"></i> click to enter...
+        </button>
+    </div>
+
+    <div class="container">
+        <div class="card profile">
+            <div class="profile-header">
+                <div class="profile-img">
+                    <img src="img/logo.png" alt="Profile Picture">
+                </div>
+                <div class="profile-info">
+                    <h1>ALEX1DEV</h1>
+                    <p class="bio">Student & Developer</p>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="#" class="social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            
+            <div class="music-player">
+                <div class="music-disc">
+                    <div class="disc-inner"></div>
+                </div>
+                <div class="music-info">
+                    <div class="song-details">
+                        <h3 class="song-title">Song Title</h3>
+                        <p class="song-artist">Artist Name</p>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar"></div>
+                    </div>
+                    <div class="time-info">
+                        <span class="current-time">0:00</span>
+                        <span class="total-time">0:00</span>
+                    </div>
+                    <div class="controls">
+                        <button class="control-btn prev-btn" aria-label="Previous song">
+                            <i class="fas fa-step-backward"></i>
+                        </button>
+                        <button class="control-btn play-btn" aria-label="Play or pause song">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="control-btn next-btn" aria-label="Next song">
+                            <i class="fas fa-step-forward"></i>
+                        </button>
+                    </div>
+                    <div class="volume-container">
+                        <i class="fas fa-volume-up volume-icon"></i>
+                        <div class="volume-slider">
+                            <div class="volume-percentage"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="links-container">
+            <a href="https://alex1dev.xyz" class="link-card" data-aos="fade-up">
+                <div class="link-content">
+                    <i class="fas fa-globe"></i>
+                    <span>My Website</span>
+                </div>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+
+            <a href="#" class="link-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="link-content">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>My Store</span>
+                </div>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+
+            <a href="#" class="link-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="link-content">
+                    <i class="fas fa-music"></i>
+                    <span>My Music</span>
+                </div>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+
+            <a href="#" class="link-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="link-content">
+                    <i class="fas fa-book"></i>
+                    <span>My Blog</span>
+                </div>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+
+            <a href="https://znova.it" class="link-card featured" data-aos="fade-up" data-aos-delay="400">
+                <div class="link-content">
+                    <i class="fas fa-star"></i>
+                    <span>Featured Project</span>
+                </div>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="gallery">
+            <h2>Latest Work</h2>
+            <div class="gallery-grid">
+                <a href="https://github.com/yourusername/project1" class="gallery-item" data-aos="zoom-in" data-demo-url="https://project1-demo.com">
+                    <img src="img/placeholder.png" alt="Gallery Image 1">
+                    <div class="gallery-overlay">
+                        <div class="gallery-links">
+                            <span class="github-link"><i class="fab fa-github"></i> View Code</span>
+                            <span class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/yourusername/project2" class="gallery-item" data-aos="zoom-in" data-aos-delay="100" data-demo-url="https://project2-demo.com">
+                    <img src="img/placeholder.png" alt="Gallery Image 2">
+                    <div class="gallery-overlay">
+                        <div class="gallery-links">
+                            <span class="github-link"><i class="fab fa-github"></i> View Code</span>
+                            <span class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/yourusername/project3" class="gallery-item" data-aos="zoom-in" data-aos-delay="200" data-demo-url="https://project3-demo.com">
+                    <img src="img/placeholder.png" alt="Gallery Image 3">
+                    <div class="gallery-overlay">
+                        <div class="gallery-links">
+                            <span class="github-link"><i class="fab fa-github"></i> View Code</span>
+                            <span class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <p>© <span id="year"></span> <a href="https://alex1dev.xyz">ALEX1DEV</a>. All rights reserved.</p>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="toggle-ball"></div>
+            </div>
+        </footer>
+    </div>
+
+    <audio id="audio-player" preload="metadata" autoplay muted></audio>
+
+    <script>
+        window.customPlaylist = [
+            {
+                title: "Damelo",
+                artist: "Tzanca Uraganu Mr Juve",
+                src: "songs/song1.mp3"
+            },
+            {
+                title: "Oh Mamma Mia",
+                artist: "Guè, Rose Villain",
+                src: "songs/song2.mp3"
+            },
+            {
+                title: "A me mi piace",
+                artist: "ALFA",
+                src: "songs/song3.mp3"
+            }
+        ];
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/music-player.js"></script>
+</body>
+</html>
