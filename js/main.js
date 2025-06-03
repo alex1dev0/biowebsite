@@ -10,9 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.querySelector('.theme-toggle');
     const html = document.documentElement;
     
-    // Non è più necessario impostare il tema qui poiché lo facciamo già nell'head
-    // Ma manteniamo il toggle per cambiare tema
-    
     themeToggle.addEventListener('click', () => {
         html.classList.toggle('dark-mode');
         
